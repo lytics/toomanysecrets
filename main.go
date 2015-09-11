@@ -22,7 +22,7 @@ func main() {
 	}
 	auth := "token " + token
 
-	dryrun := flag.Bool("dryrun", true, "drynrun - doesn't actually delete")
+	dryrun := flag.Bool("dryrun", true, "don't actually delete anything")
 
 	flag.Parse()
 
