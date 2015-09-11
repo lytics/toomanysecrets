@@ -1,12 +1,16 @@
 language: go
-
 env:
     - GIMME_OS=linux GIMME_ARCH=amd64
     - GIMME_OS=darwin GIMME_ARCH=amd64
     - GIMME_OS=windows GIMME_ARCH=amd64
-
 install:
     - go get -d -v ./...
-
 script:
     - go build -v ./...
+deploy:
+  provider: releases
+  api_key:
+    secure: fdnooBE/Ow/s/DzZQeHrACrO0jCGT0dT000wHmChRWoTLNZlNDNUpZdJK5hgmoYg5Hiw/L2MdgTRn5Pqsq9xMtPU1SJFND20QYt9l+XOqkEkLakUrm6LU+UfAjA2agpDvcMK2+EpBxh0N6Eod+3bJMuoCnrLWls+zTg+Qn4KEEH1DfIlADCaB93HILhaDcw9Z2Fe4KbEIE1EpiuQHLjNsK6fc1t+d6hon/pdIDb5MzSG+jKkmY8iJ9qmoy3OGfc45dHIY9vFuwQRcSXs/kF1Lzrr7XGa879sMcltnAAoS/TfQSDEx2ba8oWG9lC2tIZkrCXjZZsxHh6D7V+tgEZv+l5hPYNh15vIbVsifcQCFvfP5Cg/rob7eitxX0CUEIOUO4A0QsuFHUM5DKZ1KsOtiVrKFyQOwK9DwG5Wti7BVvEYvvjyhg0Wb3Jl8Xd9hbxkj7YAZKyL5xOv9WkamBnvYlJ5Ek0q0xz8ke7nFGsZYaI0XLHpzSU+rNiNX6heaiw4lf8fT9TfVLlioBkOfxx2d5r5uTg0OQPKNU5LhfQhcV6ZOFLgQqs9AKQjm9fOYQwxBba4RPoWdur3SsTxLpH/M4tOzUTptAbanfDfx09tmaofvwCpX3EneoPJuhkO72Rc7HK9VbwAH9yuBgXcrcLu2lFb3t+VK08DFfMc+VRFo5w=
+  file: toomanysecrets
+  on:
+    repo: lytics/toomanysecrets
