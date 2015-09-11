@@ -16,5 +16,4 @@ deploy:
     - toomanysecrets-darwin-amd64
     - toomanysecrets-windows-amd64
   on:
-    branch: master
-    repo: lytics/toomanysecrets
+    tags: true
